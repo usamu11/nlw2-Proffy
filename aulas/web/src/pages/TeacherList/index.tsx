@@ -3,7 +3,6 @@ import React from 'react';
 import PageHeader from '../../Components/PageHeader';
 import TeacherItem from '../../Components/TeacherItem';
 
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
