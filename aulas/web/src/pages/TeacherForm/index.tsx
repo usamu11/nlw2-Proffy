@@ -26,6 +26,13 @@ function TeacherForm() {
           <Textarea name="bio" label="Biografia" />
         </fieldset>
 
+        <fieldset>
+          <legend>Sobre a aula</legend>
+
+          <Select name="subject" label="Matéria" />
+          <Input name="cost" label="Custo da sua hora por aula" />
+        </fieldset>
+
         <footer>
           <p>
             <img src={waringIcon} alt="Aviso Importante" />
