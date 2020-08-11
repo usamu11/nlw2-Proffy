@@ -3,6 +3,8 @@ import React from "react";
 import PageHeader from "../../Components/PageHeader";
 import Input from "../../Components/Input";
 
+import waringIcon from "../../assets/images/icons/warning.svg";
+
 import "./styles.css";
 
 function TeacherForm() {
@@ -15,10 +17,20 @@ function TeacherForm() {
       <main>
         <fieldset>
           <legend>Seus dados</legend>
+
           <Input name="name" label="Nome completo" />
           <Input name="avatar" label="Avatar" />
           <Input name="whatsapp" label="WhatAapp" />
         </fieldset>
+
+        <footer>
+          <p>
+            <img src={waringIcon} alt="Aviso Importante" />
+            Importante! <br />
+            Preencha todos os dados
+          </p>
+          <button type="button">Salvar cadastro</button>
+        </footer>
       </main>
     </div>
   );
