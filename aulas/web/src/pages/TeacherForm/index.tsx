@@ -2,7 +2,7 @@ import React from "react";
 
 import PageHeader from "../../Components/PageHeader";
 
-import "/styles.css";
+import "./styles.css";
 
 function TeacherForm() {
   return (
