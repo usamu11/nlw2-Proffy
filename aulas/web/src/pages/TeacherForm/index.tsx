@@ -5,7 +5,7 @@ import Input from "../../Components/Input";
 import Textarea from "../../Components/Textarea";
 import Select from "../../Components/Select";
 
-import waringIcon from "../../assets/images/icons/warning.svg";
+import warningIcon from "../../assets/images/icons/warning.svg";
 
 import "./styles.css";
 
@@ -29,13 +29,30 @@ function TeacherForm() {
         <fieldset>
           <legend>Sobre a aula</legend>
 
-          <Select name="subject" label="Matéria" />
+          <Select
+            name="subject"
+            label="Matéria"
+            options={[
+              { value: "Artes", label: "Artes" },
+              { value: "Biologia", label: "Biologia" },
+              { value: "Ciências", label: "Ciências" },
+              { value: "Educação Física", label: "Educação Física" },
+              { value: "Física", label: "Física" },
+              { value: "Geografia", label: "Geografia" },
+              { value: "História", label: "História" },
+              { value: "Matemática", label: "Matemática" },
+              { value: "Português", label: "Português" },
+              { value: "Química", label: "Química" },
+              { value: "Sociologia", label: "Sociologia" },
+              { value: "Filosofia", label: "Filosofia" },
+            ]}
+          />
           <Input name="cost" label="Custo da sua hora por aula" />
         </fieldset>
 
         <footer>
           <p>
-            <img src={waringIcon} alt="Aviso Importante" />
+            <img src={warningIcon} alt="Aviso Importante" />
             Importante! <br />
             Preencha todos os dados
           </p>
