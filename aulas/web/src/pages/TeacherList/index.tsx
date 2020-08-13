@@ -1,12 +1,13 @@
 import React, { useState, FormEvent } from "react";
 
 import PageHeader from "../../Components/PageHeader";
-import TeacherItem from "../../Components/TeacherItem";
+import TeacherItem, { Teacher } from "../../Components/TeacherItem";
 import Input from "../../Components/Input";
 import Select from "../../Components/Select";
 
-import "./styles.css";
 import api from "../../services/api";
+
+import "./styles.css";
 
 function TeacherList() {
   const [teachers, setTeachers] = useState([]);
@@ -87,8 +88,8 @@ function TeacherList() {
       </PageHeader>
 
       <main>
-        {teachers.map((teacher) => {
-          return <TeacherItem teacher={teacher} />;
+        {teachers.map((teacher: Teacher) => {
+          return <TeacherItem key={teacher.id} teacher={teacher} />;
         })}
       </main>
     </div>
