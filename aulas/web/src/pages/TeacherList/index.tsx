@@ -6,16 +6,25 @@ import Input from "../../Components/Input";
 import Select from "../../Components/Select";
 
 import "./styles.css";
+import api from "../../services/api";
 
 function TeacherList() {
   const [subject, setSubject] = useState("");
   const [week_day, setWeekDay] = useState("");
   const [time, setTime] = useState("");
 
-  function searchTeachers(e: FormEvent) {
+  async function searchTeachers(e: FormEvent) {
     e.preventDefault();
 
-    console.log("a");
+    const response = await api.get("classes", {
+      params: {
+        subject,
+        week_day,
+        time,
+      },
+    });
+
+    console.log(response.data);
   }
 
   return (
