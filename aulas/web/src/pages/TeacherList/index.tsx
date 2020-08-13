@@ -88,7 +88,7 @@ function TeacherList() {
 
       <main>
         {teachers.map((teacher) => {
-          return <TeacherItem />;
+          return <TeacherItem teacher={teacher} />;
         })}
       </main>
     </div>
