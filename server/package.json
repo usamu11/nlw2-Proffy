@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "build": "tsc",
-    "postinstall": "npm run build",
+    "postinstall": "yarn build",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
     "knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback",
     "publishToHeroku": "cd ../ && git subtree push --prefix server heroku-app-back3nd master || true"
